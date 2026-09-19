@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="小本子-创意手帐与速写本选购指南，涵盖手帐本、速写本、胶带、贴纸、印章及DIY工具推荐，提供购买建议与使用技巧。">
+    <meta name="keywords" content="小本子,手帐本,速写本,创意笔记本,文具,DIY手帐">
+    <title>小本子-创意手帐与速写本选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5D4037;
+            --secondary-color: #8D6E63;
+            --accent-color: #D7CCC8;
+            --bg-color: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: var(--text-sub);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #3E2723;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-search {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .hero-search input {
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 30px 0 0 30px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .hero-search button {
+            padding: 0 25px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 90px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+        }
+
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .count {
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        /* Content Area */
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Section Styling */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--text-main);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .view-all {
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-tag {
+            font-size: 12px;
+            color: var(--secondary-color);
+            background: var(--accent-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: var(--text-sub);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            padding: 10px 15px;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .price {
+            color: #E53935;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Feature Section */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-item {
+            display: flex;
+            background: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            align-items: center;
+            gap: 20px;
+        }
+
+        .guide-img {
+            width: 120px;
+            height: 80px;
+            border-radius: 6px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .guide-content {
+            flex: 1;
+        }
+
+        .guide-content h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .guide-content p {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text-sub);
+            padding-left: 26px;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3E2723;
+            color: #D7CCC8;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                position: static;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .guide-img {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            小本子
+            <span>创意手帐指南</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">全部推荐</a></li>
+                <li><a href="#">手帐本</a></li>
+                <li><a href="#">速写本</a></li>
+                <li><a href="#">胶带贴纸</a></li>
+                <li><a href="#">DIY工具</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button class="btn btn-outline">登录</button>
+            <button class="btn btn-primary">注册</button>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>记录生活，从一本好“小本子”开始</h1>
+        <p>无论是规划日程、速写灵感还是记录心情，我们为您精选了最适合的创意本子与文具工具。</p>
+        <div class="hero-search">
+            <input type="text" placeholder="搜索手帐本、速写本、胶带...">
+            <button>搜索</button>
+        </div>
+    </section>
+
+    <div class="main-layout">
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">热门分类</h3>
+                <ul class="category-list">
+                    <li><a href="#">手帐本 <span class="count">120</span></a></li>
+                    <li><a href="#">硬壳本 <span class="count">85</span></a></li>
+                    <li><a href="#">线圈本 <span class="count">64</span></a></li>
+                    <li><a href="#">速写本 <span class="count">45</span></a></li>
+                    <li><a href="#">横线本 <span class="count">32</span></a></li>
+                    <li><a href="#">创意DIY <span class="count">98</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">选购指南</h3>
+                <ul class="category-list">
+                    <li><a href="#">如何挑选手帐本纸张？</a></li>
+                    <li><a href="#">手帐本内页格式对比</a></li>
+                    <li><a href="#">胶带粘贴技巧大全</a></li>
+                    <li><a href="#">手帐排版入门教程</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            
+            <!-- Featured Products -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">本周热门小本子</h2>
+                    <a href="#" class="view-all">查看更多 &rarr;</a>
+                </div>
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/journal1/400/300" alt="复古牛皮纸手帐本" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">硬壳本</span>
+                            <h3 class="card-title">复古牛皮纸手帐本 - 经典系列</h3>
+                            <p class="card-desc">加厚纸张，适合水彩与钢笔书写，锁线装订，180度平摊。</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>评分 4.8</span>
+                            <span class="price">¥45.00</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/sketch2/400/300" alt="专业速写本" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">速写本</span>
+                            <h3 class="card-title">康颂专业速写本 - 200g素描纸</h3>
+                            <p class="card-desc">适合马克笔与炭笔，高克重纸张不透墨，适合户外写生。</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>评分 4.9</span>
+                            <span class="price">¥128.00</span>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/seed/planner3/400/300" alt="日程规划本" class="card-img">
+                        <div class="card-body">
+                            <span class="card-tag">规划本</span>
+                            <h3 class="card-title">极简日程规划本 - 2024年版</h3>
+                            <p class="card-desc">包含月视图与周视图，搭配每日笔记页，高效管理时间。</p>
+                        </div>
+                        <div class="card-footer">
+                            <span>评分 4.7</span>
+                            <span class="price">¥59.90</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">为什么选择“小本子”</h2>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📝</div>
+                        <h3>灵感捕捉</h3>
+                        <p>随时随地记录灵感和想法，碎片化时间也能创造价值。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <h3>创意表达</h3>
+                        <p>通过涂鸦、拼贴和手写，个性化表达你的独特审美。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📅</div>
+                        <h3>目标管理</h3>
+                        <p>将大目标拆解为每日小任务，可视化你的成长轨迹。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guides -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">新手入门指南</h2>
+                    <a href="#" class="view-all">更多教程 &rarr;</a>
+                </div>
+                <div class="guide-list">
+                    <a href="#" class="guide-item">
+                        <img src="https://picsum.photos/seed/tech1/200/150" alt="手帐排版教程" class="guide-img">
+                        <div class="guide-content">
+                            <h4>手帐排版教程：从零开始学布局</h4>
+                            <p>详细讲解如何利用胶带、贴纸和文字规划页面，打造整洁美观的手帐。</p>
+                        </div>
+                    </a>
+                    <a href="#" class="guide-item">
+                        <img src="https://picsum.photos/seed/tech2/200/150" alt="胶带使用技巧" class="guide-img">
+                        <div class="guide-content">
+                            <h4>手帐胶带使用技巧：叠贴与留白</h4>
+                            <p>掌握胶带的切割与重叠技巧，让简单的胶带也能拼贴出层次感。</p>
+                        </div>
+                    </a>
+                    <a href="#" class="guide-item">
+                        <img src="https://picsum.photos/seed/tech3/200/150" alt="文具搭配推荐" class="guide-img">
+                        <div class="guide-content">
+                            <h4>文具搭配推荐：适合新手的入门套装</h4>
+                            <p>精选几款性价比高的笔和本子，组成你的第一套手帐工具箱。</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2 class="section-title" style="font-size: 20px; margin-bottom: 20px;">常见问题解答</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Q: “小本子”适合初学者吗？</div>
+                    <div class="faq-answer">A: 非常适合。小尺寸的本子（如A6或B6）方便携带，且能减少书写压力，非常适合记录日常心情和随手涂鸦。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 如何选择适合水彩的“小本子”？</div>
+                    <div class="faq-answer">A: 建议选择克重较高（如200g以上）的纸张，并确认是否标注了“适合水彩”或“不透墨”，避免颜料渗透到下一页。</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Q: 线圈本和胶装本有什么区别？</div>
+                    <div class="faq-answer">A: 线圈本可以180度平摊，方便书写和绘画；胶装本通常更美观、轻便，但无法完全平摊，适合文字记录。</div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于小本子</h4>
+                <p style="font-size: 14px; color: #BCAAA4;">致力于为创意爱好者提供最全面的文具选购指南与DIY教程，让记录生活成为一种享受。</p>
+            </div>
+            <div class="footer-col">
+                <h4>热门分类</h4>
+                <ul>
+                    <li><a href="#">手帐本</a></li>
+                    <li><a href="#">速写本</a></li>
+                    <li><a href="#">钢笔</a></li>
+                    <li><a href="#">胶带贴纸</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>帮助中心</h4>
+                <ul>
+                    <li><a href="#">购买指南</a></li>
+                    <li><a href="#">退换货政策</a></li>
+                    <li><a href="#">联系客服</a></li>
+                    <li><a href="#">隐私条款</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">小红书</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 小本子创意指南. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+                                              </html>
