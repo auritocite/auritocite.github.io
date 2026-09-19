@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="罗百吉吹喇叭 - 台湾电音教父罗百吉官方资料库。收录经典电音作品、专辑介绍、舞台演出视频及电音文化深度解析。探索台湾90年代至21世纪初的电音黄金时代。">
+    <meta name="keywords" content="罗百吉,吹喇叭,台湾电音,电音教父,舞曲,罗百吉吹喇叭">
+    <title>罗百吉吹喇叭 - 台湾电音教父经典作品与电音文化资料库</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff0055;
+            --secondary-color: #00e5ff;
+            --bg-dark: #0a0a0a;
+            --bg-card: #161616;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: radial-gradient(circle at center, rgba(255, 0, 85, 0.15), transparent 70%),
+                        linear-gradient(180deg, #0a0a0a 0%, #1a050a 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--secondary-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 85, 0.6);
+        }
+
+        /* Audio Visualizer Simulation */
+        .visualizer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                rgba(255, 255, 255, 0.03) 2px,
+                rgba(255, 255, 255, 0.03) 4px
+            );
+            z-index: 1;
+        }
+
+        /* Content Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #2a2a2a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.05);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 0, 85, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover .play-btn {
+            opacity: 1;
+        }
+
+        .play-btn::after {
+            content: '';
+            border-style: solid;
+            border-width: 8px 0 8px 14px;
+            border-color: transparent transparent transparent white;
+            margin-left: 4px;
+        }
+
+        /* Artist Bio */
+        .bio-section {
+            background-color: #0f0f0f;
+        }
+
+        .bio-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .bio-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .bio-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .bio-text {
+            flex: 1.5;
+            min-width: 300px;
+        }
+
+        /* Discography List */
+        .disc-list {
+            border-left: 2px solid rgba(255, 255, 255, 0.1);
+            padding-left: 30px;
+        }
+
+        .disc-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .disc-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(255, 0, 85, 0.2);
+        }
+
+        .disc-year {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 50px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Simplified for single file */
+            .bio-content { flex-direction: column; }
+            .hero { height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <span>⚡</span> 罗百吉吹喇叭
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#intro" class="active">艺人简介</a></li>
+                    <li><a href="#works">经典作品</a></li>
+                    <li><a href="#albums">专辑列表</a></li>
+                    <li><a href="#culture">电音文化</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="visualizer"></div>
+            <div class="hero-content">
+                <span class="hero-tag">台湾电音教父</span>
+                <h1>罗百吉吹喇叭</h1>
+                <p>探索台湾90年代至今的电音文化里程碑。从《喇叭》到《My Number One》，重温那个充满节奏与活力的黄金时代。</p>
+                <a href="#works" class="cta-btn">立即聆听经典</a>
+            </div>
+        </section>
+
+        <!-- Artist Intro -->
+        <section id="intro" class="section-padding bio-section">
+            <div class="container">
+                <div class="bio-content">
+                    <div class="bio-image">
+                        <img src="https://picsum.photos/seed/lo/600/400" alt="罗百吉演出照">
+                    </div>
+                    <div class="bio-text">
+                        <h2>电音先驱与舞台王者</h2>
+                        <p>罗百吉（Lo Pei-ji），台湾著名的DJ及音乐制作人，被誉为“台湾电音教父”。他以极具辨识度的喇叭声采样、强烈的节奏感和充满活力的现场表演风格闻名于世。</p>
+                        <p>他的音乐不仅仅是娱乐，更是一种文化符号。在90年代的迪斯科舞厅文化中，罗百吉通过《喇叭》等代表作，定义了台湾的舞曲风格，影响了无数后来的电子音乐制作人。</p>
+                        <div style="margin-top: 20px; display: flex; gap: 20px;">
+                            <div>
+                                <h3 style="color: var(--secondary-color); font-size: 2rem;">20+</h3>
+                                <span style="font-size: 0.9rem;">年音乐生涯</span>
+                            </div>
+                            <div>
+                                <h3 style="color: var(--secondary-color); font-size: 2rem;">10+</h3>
+                                <span style="font-size: 0.9rem;">大碟发行</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Works -->
+        <section id="works" class="section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <h2>代表作品与经典现场</h2>
+                    <p style="max-width: 600px; margin: 0 auto;">罗百吉的音乐生涯中诞生了许多脍炙人口的单曲，以下是他最具代表性的作品。</p>
+                </div>
+
+                <div class="grid-3" style="margin-top: 40px;">
+                    <!-- Work 1 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/lo1/400/300" alt="喇叭专辑封面">
+                            <div class="play-btn"></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">1996 · 经典专辑</div>
+                            <h3>《喇叭》</h3>
+                            <p>同名主打歌，以夸张的喇叭采样和复古迪斯科节拍，成为台湾电音的标志性符号，至今仍在各大夜店播放。</p>
+                        </div>
+                    </article>
+
+                    <!-- Work 2 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/lo2/400/300" alt="My Number One MV截图">
+                            <div class="play-btn"></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">2000 · 舞曲巅峰</div>
+                            <h3>《My Number One》</h3>
+                            <p>结合了R&B与House节奏的流行舞曲，展现了罗百吉在音乐风格上的多元化尝试，极具感染力。</p>
+                        </div>
+                    </article>
+
+                    <!-- Work 3 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/lo3/400/300" alt="Disco Fever现场">
+                            <div class="play-btn"></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-meta">1998 · 现场演出</div>
+                            <h3>《Disco Fever》</h3>
+                            <p>捕捉了90年代舞厅狂欢的瞬间，节奏紧凑，氛围热烈，是现场演出不可错过的曲目。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discography Timeline -->
+        <section id="albums" class="section-padding bio-section">
+            <div class="container">
+                <div class="text-center">
+                    <h2>专辑发行年表</h2>
+                    <p>回顾罗百吉音乐生涯中的重要节点。</p>
+                </div>
+                
+                <div class="disc-list" style="margin-top: 40px;">
+                    <div class="disc-item">
+                        <span class="disc-year">1996</span>
+                        <h3>《喇叭》</h3>
+                        <p>正式确立“喇叭”风格，进军主流市场。</p>
+                    </div>
+                    <div class="disc-item">
+                        <span class="disc-year">1998</span>
+                        <h3>《Disco Fever》</h3>
+                        <p>延续迪斯科热潮，加入更多合成器音色。</p>
+                    </div>
+                    <div class="disc-item">
+                        <span class="disc-year">2000</span>
+                        <h3>《My Number One》</h3>
+                        <p>融合欧美舞曲元素，获得多项金曲提名。</p>
+                    </div>
+                    <div class="disc-item">
+                        <span class="disc-year">2005</span>
+                        <h3>《罗百吉精选》</h3>
+                        <p>回顾出道以来的高光时刻，满足老歌迷需求。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Culture Section -->
+        <section id="culture" class="section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <h2>电音文化影响</h2>
+                </div>
+                <div class="grid-3" style="margin-top: 40px;">
+                    <article style="background: #1a1a1a; padding: 30px; border-radius: 8px; border: 1px solid #333;">
+                        <h3>🥁 节奏革新</h3>
+                        <p>罗百吉早期作品中的鼓点设计非常具有攻击性，打破了当时华语流行乐的舒缓节奏，为华语舞曲注入了强劲动力。</p>
+                    </article>
+                    <article style="background: #1a1a1a; padding: 30px; border-radius: 8px; border: 1px solid #333;">
+                        <h3>🎤 现场互动</h3>
+                        <p>他擅长调动现场气氛，通过麦克风喊话和即兴互动，建立了DJ与观众之间独特的情感连接。</p>
+                    </article>
+                    <article style="background: #1a1a1a; padding: 30px; border-radius: 8px; border: 1px solid #333;">
+                        <h3>🎵 跨界融合</h3>
+                        <p>将台湾本土元素与欧美House、Techno风格结合，为后来的华语电子音乐发展开辟了道路。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于罗百吉</h4>
+                    <p style="font-size: 0.9rem;">台湾资深音乐制作人、DJ。以“吹喇叭”风格闻名，是华语电音发展的关键人物。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">艺人简介</a></li>
+                        <li><a href="#works">代表作品</a></li>
+                        <li><a href="#albums">专辑列表</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资讯</h4>
+                    <ul>
+                        <li><a href="#">夜店演出排期</a></li>
+                        <li><a href="#">电音节参与</a></li>
+                        <li><a href="#">音乐制作教程</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 罗百吉吹喇叭资料库. All Rights Reserved. 仅供资料整理与文化交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
