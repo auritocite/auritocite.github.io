@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美景之屋完整版-治愈系绘本与自然生活美学指南</title>
+    <meta name="description" content="美景之屋完整版：探索治愈系绘本艺术，分享自然生活美学与创意手作灵感。提供高清绘本下载、阅读指南及生活美学课程，打造专属的静谧精神角落。">
+    <meta name="keywords" content="美景之屋, 治愈系绘本, 自然生活美学, 创意手作, 绘本阅读指南">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5d7a6e;
+            --secondary-color: #8fa993;
+            --accent-color: #d4a373;
+            --bg-color: #f9f7f2;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-light: #666;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --font-serif: "Songti SC", "Noto Serif SC", serif;
+            --font-sans: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/seed/naturehouse/1920/1080') no-repeat center/cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: transform 0.2s, background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Content Area Layout */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Main Content */
+        .main-column article {
+            margin-bottom: 3rem;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 300px;
+            background-color: #eee;
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .article-title {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 0.5rem;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 1rem;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg-color);
+            color: var(--primary-color);
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+
+        .tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .download-list li {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.8rem;
+        }
+
+        .download-list li:last-child {
+            border-bottom: none;
+        }
+
+        .download-list a {
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .download-list .size {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* Book Showcase */
+        .book-showcase {
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+            padding-bottom: 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--secondary-color) var(--bg-color);
+        }
+
+        .book-showcase::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .book-showcase::-webkit-scrollbar-track {
+            background: var(--bg-color);
+            border-radius: 4px;
+        }
+
+        .book-showcase::-webkit-scrollbar-thumb {
+            background-color: var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        .book-item {
+            min-width: 160px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            flex-shrink: 0;
+        }
+
+        .book-cover {
+            width: 120px;
+            height: 160px;
+            margin: 0 auto 1rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .book-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .book-author {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 4rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .book-showcase {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>🏡</span> 美景之屋
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#guide">阅读指南</a>
+                <a href="#gallery">作品赏析</a>
+                <a href="#download">完整版下载</a>
+                <a href="#community">交流社区</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>美景之屋完整版</h1>
+                <p>在喧嚣的都市中，寻找一方心灵的栖息地。探索治愈系绘本的无限魅力，感受自然与生活的和谐共鸣。</p>
+                <div>
+                    <a href="#guide" class="btn">开始阅读</a>
+                    <a href="#download" class="btn btn-outline">获取完整版</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Features -->
+        <section class="container">
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>自然治愈</h3>
+                    <p>精选自然景观与温馨家居场景，通过细腻的笔触抚平现代生活的焦虑与疲惫。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>完整收录</h3>
+                    <p>提供高清扫描版本及官方设定集，确保您能获得最佳的阅读体验与收藏价值。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>艺术鉴赏</h3>
+                    <p>深度解析作者创作技法，从色彩运用到构图逻辑，带你领略绘本艺术的精髓。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <section class="container" id="guide">
+            <div class="content-layout">
+                <!-- Left Column: Articles -->
+                <div class="main-column">
+                    <div class="section-header">
+                        <h2>阅读指南与赏析</h2>
+                        <p>深入理解《美景之屋》的世界观与艺术风格</p>
+                    </div>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/houseart/800/400" alt="美景之屋艺术插画" class="article-img">
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>📅 2023-10-24</span>
+                                <span>🏷️ 赏析</span>
+                            </div>
+                            <h3 class="article-title">如何欣赏治愈系绘本中的光影运用？</h3>
+                            <p class="article-excerpt">
+                                在《美景之屋》系列中，作者巧妙地利用自然光与室内灯光的对比，营造出温暖而宁静的氛围。阅读时，建议放慢速度，关注页面边缘的光晕处理，这往往象征着希望与新生。
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/garden/800/400" alt="庭院设计灵感" class="article-img">
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>📅 2023-10-20</span>
+                                <span>🏷️ 生活美学</span>
+                            </div>
+                            <h3 class="article-title">将绘本场景融入现实生活：庭院改造灵感</h3>
+                            <p class="article-excerpt">
+                                《美景之屋》中的庭院设计充满了日式枯山水与现代园艺的融合。本文将分享如何利用低维护成本的植物和石材，在自家阳台上复刻书中的静谧角落。
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/cozy/800/400" alt="温馨室内" class="article-img">
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span>📅 2023-10-15</span>
+                                <span>🏷️ 生活方式</span>
+                            </div>
+                            <h3 class="article-title">断舍离之后：打造极简而温馨的居住空间</h3>
+                            <p class="article-excerpt">
+                                受《美景之屋》启发，越来越多的人开始追求“少即是多”的居住理念。本文探讨如何在保持生活便利性的前提下，通过家具选择和色彩搭配，提升居住空间的舒适度。
+                            </p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Right Column: Sidebar -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h4 class="sidebar-title">热门标签</h4>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">治愈系</a>
+                            <a href="#" class="tag">自然风光</a>
+                            <a href="#" class="tag">绘本阅读</a>
+                            <a href="#" class="tag">手账素材</a>
+                            <a href="#" class="tag">室内设计</a>
+                            <a href="#" class="tag">慢生活</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget" id="download">
+                        <h4 class="sidebar-title">资源下载</h4>
+                        <ul class="download-list">
+                            <li>
+                                <a href="#">
+                                    <span>美景之屋 Vol.1-3 完整版</span>
+                                    <span class="size">120MB</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>高清壁纸合集 (4K)</span>
+                                    <span class="size">850MB</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>官方设定集 PDF</span>
+                                    <span class="size">45MB</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>创作原画线稿</span>
+                                    <span class="size">210MB</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p style="margin-top:1rem; font-size:0.8rem; color:#888;">* 仅供个人学习交流使用，请支持正版。</p>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="sidebar-title">阅读推荐</h4>
+                        <div style="display:flex; gap:10px; align-items:center;">
+                            <img src="https://picsum.photos/seed/book1/60/80" alt="推荐书籍" style="width:50px; height:70px; border-radius:4px;">
+                            <div>
+                                <div style="font-size:0.9rem; font-weight:bold;">森林之诗</div>
+                                <div style="font-size:0.8rem; color:#888;">同类风格推荐</div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Book Showcase -->
+        <section class="container" id="gallery">
+            <div class="section-header">
+                <h2>作品系列展示</h2>
+                <p>从清晨的露水到夜晚的灯火，每一页都是风景。</p>
+            </div>
+            <div class="book-showcase">
+                <div class="book-item">
+                    <img src="https://picsum.photos/seed/bookcover1/200/280" alt="Book Cover 1" class="book-cover">
+                    <div class="book-title">清晨的露水</div>
+                    <div class="book-author">作者名</div>
+                </div>
+                <div class="book-item">
+                    <img src="https://picsum.photos/seed/bookcover2/200/280" alt="Book Cover 2" class="book-cover">
+                    <div class="book-title">午后茶会</div>
+                    <div class="book-author">作者名</div>
+                </div>
+                <div class="book-item">
+                    <img src="https://picsum.photos/seed/bookcover3/200/280" alt="Book Cover 3" class="book-cover">
+                    <div class="book-title">星空之下</div>
+                    <div class="book-author">作者名</div>
+                </div>
+                <div class="book-item">
+                    <img src="https://picsum.photos/seed/bookcover4/200/280" alt="Book Cover 4" class="book-cover">
+                    <div class="book-title">四季流转</div>
+                    <div class="book-author">作者名</div>
+                </div>
+                <div class="book-item">
+                    <img src="https://picsum.photos/seed/bookcover5/200/280" alt="Book Cover 5" class="book-cover">
+                    <div class="book-title">雨后小径</div>
+                    <div class="book-author">作者名</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+                <p>关于《美景之屋》完整版资源与阅读的疑问</p>
+            </div>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">《美景之屋完整版》包含多少章节？</div>
+                    <div class="faq-answer">
+                        目前完整版已收录全系列核心章节，共计12个主要篇章，并附带额外的彩蛋番外篇，确保读者体验的完整性。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">下载的资源支持哪些设备？</div>
+                    <div class="faq-answer">
+                        我们提供的电子书格式兼容主流阅读器，包括iPad/Kindle/手机APP以及电脑端PDF阅读器，支持翻页与搜索功能。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何获取最新的周边信息？</div>
+                    <div class="faq-answer">
+                        您可以关注我们的官方公众号“美景之屋”，第一时间获取画集发售信息及作者线下活动的通知。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于美景之屋</h4>
+                <p style="color:#bdc3c7; font-size:0.9rem; line-height:1.8;">
+                    我们致力于推广治愈系艺术与自然生活美学，通过高质量的绘本内容和设计灵感，帮助人们在快节奏的生活中找回内心的宁静。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">阅读指南</a></li>
+                    <li><a href="#">资源下载</a></li>
+                    <li><a href="#">作者专访</a></li>
+                    <li><a href="#">版权声明</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li><a href="#">合作洽谈</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">加入社群</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 美景之屋完整版资源站. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
