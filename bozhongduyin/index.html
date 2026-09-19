@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="播种读音指南：提供播种的拼音、声调标注及标准普通话发音，帮助用户准确掌握该词汇的读音与用法。">
+    <meta name="keywords" content="播种读音,播种拼音,播种怎么读,播种读音指南">
+    <title>播种读音-标准普通话发音与词汇指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --primary-light: #e8f5e9;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --accent-color: #ff6f00;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            font-size: 1.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 首屏 Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1b5e20 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pronunciation-box {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(5px);
+        }
+
+        .pinyin-display {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            font-family: "KaiTi", "STKaiti", serif; /* 使用楷体增强语文感 */
+        }
+
+        .pinyin-note {
+            font-size: 1rem;
+            margin-top: 8px;
+            opacity: 0.8;
+        }
+
+        /* 主要内容区 */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary-light);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 24px;
+            background-color: var(--primary-color);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        /* 读音卡片 */
+        .pronunciation-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            margin-bottom: 40px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .info-label {
+            width: 120px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            flex-grow: 1;
+        }
+
+        .highlight-text {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .tone-marker {
+            font-family: "Lucida Sans Unicode", "Arial Unicode MS", sans-serif;
+            vertical-align: middle;
+            font-size: 0.8em;
+        }
+
+        /* 声调详解 */
+        .tone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .tone-item {
+            background-color: var(--primary-light);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        .tone-char {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .tone-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* 释义与用法 */
+        .usage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .usage-item {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+        }
+
+        .usage-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .usage-item p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .example-box {
+            background-color: #f5f5f5;
+            padding: 12px;
+            border-radius: 4px;
+            margin-top: 8px;
+            font-family: inherit;
+        }
+
+        /* 常见错误 */
+        .error-section {
+            background-color: #fff3e0;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .error-title {
+            color: #e65100;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+            }
+            nav ul {
+                margin-top: 12px;
+                gap: 16px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .pinyin-display {
+                font-size: 2.2rem;
+            }
+            .usage-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-row {
+                flex-direction: column;
+            }
+            .info-label {
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>🌱</span> 读音指南
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">汉语词典</a></li>
+                    <li><a href="#">拼音学习</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>播种读音指南</h1>
+            <p>准确掌握“播种”一词的拼音与声调，了解其含义、用法及发音技巧。</p>
+            
+            <div class="pronunciation-box">
+                <div class="pinyin-display">bō zhǒng</div>
+                <div class="pinyin-note">bo (第一声) · zhong (第三声)</div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 读音详情 -->
+        <section>
+            <h2 class="section-title">读音详情</h2>
+            <article class="pronunciation-card">
+                <div class="info-row">
+                    <div class="info-label">汉字</div>
+                    <div class="info-content">
+                        播 种
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">拼音</div>
+                    <div class="info-content">
+                        <span class="highlight-text">bō zhǒng</span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">声调</div>
+                    <div class="info-content">
+                        <span class="tone-marker">bō</span> (阴平/第一声) <span class="tone-marker">zhǒng</span> (上声/第三声)
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">拼音注音</div>
+                    <div class="info-content">
+                        bō zhǒng
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- 声调分解 -->
+        <section>
+            <h2 class="section-title">声调分解详解</h2>
+            <div class="tone-grid">
+                <div class="tone-item">
+                    <span class="tone-char">播</span>
+                    <span class="tone-desc">bō<br>阴平（高平调）</span>
+                </div>
+                <div class="tone-item">
+                    <span class="tone-char">种</span>
+                    <span class="tone-desc">zhǒng<br>上声（降升调）</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 含义与用法 -->
+        <section>
+            <h2 class="section-title">词汇释义与用法</h2>
+            <div class="usage-grid">
+                <div class="usage-item">
+                    <h3>基本释义</h3>
+                    <p>把种子撒在土里。这是农业种植的第一步，通常指将作物种子通过人工或机械方式植入土壤中，使其发芽生长。</p>
+                </div>
+                <div class="usage-item">
+                    <h3>引申含义</h3>
+                    <p>比喻在心中种下某种思想、希望或情感。例如：“在孩子们心中播种希望的种子”。</p>
+                </div>
+            </div>
+
+            <div class="usage-item" style="margin-top: 24px;">
+                <h3>常见搭配</h3>
+                <div class="example-box">
+                    <p>• <strong>播种季节</strong>：指适合播种的时间段。</p>
+                    <p>• <strong>播种希望</strong>：比喻创造美好的未来。</p>
+                    <p>• <strong>播种机</strong>：进行播种作业的农业机械。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见错误提示 -->
+        <section>
+            <h2 class="section-title">发音注意事项</h2>
+            <div class="error-section">
+                <div class="error-title">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </svg>
+                    容易读错的地方
+                </div>
+                <p style="margin-bottom: 8px;"><strong>“种”字的读音：</strong></p>
+                <p>在“播种”一词中，“种”读作 <strong>zhǒng</strong>（第三声），意思是种子。不要误读为 zhòng（第四声），zhòng通常用于“种植”或“种地”。</p>
+                <br>
+                <p><strong>“播”字的读音：</strong></p>
+                <p>“播”读作 <strong>bō</strong>（第一声），音同“波”。注意声调是平声，不要读成去声。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>本页面旨在提供准确的汉语词汇发音指导。</p>
+            <p>&copy; 2023 播种读音指南. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
