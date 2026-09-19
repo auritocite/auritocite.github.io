@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跑酷 - 极限运动技巧与城市探索指南</title>
+    <meta name="description" content="跑酷官方网站提供专业的跑酷入门教学、安全装备选购指南、城市探索路线规划以及全球跑酷社区动态。了解如何安全地进行跑酷，提升身体协调性与爆发力。">
+    <meta name="keywords" content="跑酷,极限运动,城市跑酷,跑酷技巧,自由奔跑,跑酷装备">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff4757;
+            --secondary-color: #2ed573;
+            --dark-bg: #1e272e;
+            --light-bg: #f1f2f6;
+            --text-main: #2f3542;
+            --text-light: #a4b0be;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--light-bg);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background-color: #e84118;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 39, 46, 0.9), rgba(30, 39, 46, 0.7)), url('https://picsum.photos/seed/parkour/1920/1080.jpg') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--dark-bg);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        /* Safety Warning */
+        .safety-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 2rem;
+            margin-bottom: 4rem;
+            border-radius: 4px;
+        }
+
+        .safety-box h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .skill-img {
+            height: 180px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .skill-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .skill-card:hover .skill-img img {
+            transform: scale(1.1);
+        }
+
+        .skill-content {
+            padding: 1.5rem;
+        }
+
+        .skill-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .skill-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-level {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: #f1f2f6;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Route Map Section */
+        .route-section {
+            background-color: white;
+            padding: 4rem 20px;
+        }
+
+        .route-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .route-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .route-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+            group: cursor;
+        }
+
+        .route-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .route-item:hover .route-bg {
+            transform: scale(1.05);
+        }
+
+        .route-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+        }
+
+        .route-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .route-tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            backdrop-filter: blur(4px);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1.5rem;
+            color: var(--text-light);
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .icon-plus {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .icon-plus {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 4rem 20px 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-light);
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .nav-container {
+                justify-content: center;
+            }
+            
+            .logo {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                </svg>
+                <span>Parkour</span>Hub
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#intro">入门基础</a></li>
+                    <li><a href="#skills">核心技巧</a></li>
+                    <li><a href="#routes">探索路线</a></li>
+                    <li><a href="#safety">安全指南</a></li>
+                    <li><a href="#community">社区</a></li>
+                </ul>
+            </nav>
+            <a href="#join" class="cta-btn">加入训练</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>突破界限，自由穿梭城市</h1>
+                <p>跑酷不仅仅是运动，更是一种探索世界、挑战自我的生活方式。掌握技巧，安全前行。</p>
+                <div class="hero-buttons">
+                    <a href="#skills" class="cta-btn">开始学习</a>
+                    <a href="#safety" class="btn-outline">了解安全规范</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Safety Warning -->
+            <section id="safety" class="safety-box">
+                <h3>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    安全第一：跑酷具有风险
+                </h3>
+                <p>在开始任何跑酷动作之前，请务必穿戴专业的护具（护膝、护肘、护腕）。本站提供的教学仅供参考，实际训练请在专业教练指导下进行，选择安全的场地，避免在人流密集或设施不稳固的区域练习。</p>
+            </section>
+
+            <!-- Intro Section -->
+            <section id="intro" class="section-header">
+                <h2>什么是跑酷？</h2>
+                <p>Parkour，中文译为“跑酷”或“自由奔跑”，起源于法国，是一种结合了军事体能训练与城市探索的现代运动。</p>
+            </section>
+
+            <!-- Skills Grid -->
+            <section id="skills">
+                <div class="section-header">
+                    <h2>核心基础技巧</h2>
+                    <p>从零开始，循序渐进地掌握动作要领</p>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-img">
+                            <img src="https://picsum.photos/seed/run/400/300.jpg" alt="滑铲">
+                        </div>
+                        <div class="skill-content">
+                            <h3>滑铲</h3>
+                            <p>一种快速通过障碍物的动作，需要良好的身体控制力和地面摩擦技巧。</p>
+                            <span class="skill-level">初级</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-img">
+                            <img src="https://picsum.photos/seed/jump/400/300.jpg" alt="翻越">
+                        </div>
+                        <div class="skill-content">
+                            <h3>精准翻越</h3>
+                            <p>利用双手支撑越过障碍物，同时保持身体姿态的流畅性。</p>
+                            <span class="skill-level">中级</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-img">
+                            <img src="https://picsum.photos/seed/climb/400/300.jpg" alt="登墙">
+                        </div>
+                        <div class="skill-content">
+                            <h3>登墙动作</h3>
+                            <p>通过单手支撑和腿部蹬地，向上攀爬墙面或垂直障碍物。</p>
+                            <span class="skill-level">中级</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-img">
+                            <img src="https://picsum.photos/seed/roll/400/300.jpg" alt="空翻">
+                        </div>
+                        <div class="skill-content">
+                            <h3>后空翻</h3>
+                            <p>高阶动作，用于落地缓冲或展示技巧，对核心力量要求极高。</p>
+                            <span class="skill-level">高级</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Route Map -->
+            <section id="routes" class="route-section">
+                <div class="route-container">
+                    <div class="section-header">
+                        <h2>城市探索路线推荐</h2>
+                        <p>寻找最适合练习的地点</p>
+                    </div>
+                    <div class="route-list">
+                        <div class="route-item">
+                            <img src="https://picsum.photos/seed/arch/600/400.jpg" alt="城市建筑群" class="route-bg">
+                            <div class="route-overlay">
+                                <h3>现代建筑群</h3>
+                                <p>适合练习登墙和精准跳跃，拥有丰富的垂直立面和宽阔的着陆点。</p>
+                                <div class="route-tags">
+                                    <span class="tag">垂直</span>
+                                    <span class="tag">跳跃</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="route-item">
+                            <img src="https://picsum.photos/seed/bridge/600/400.jpg" alt="工业废墟" class="route-bg">
+                            <div class="route-overlay">
+                                <h3>工业废墟</h3>
+                                <p>充满几何线条和管道，适合练习滑铲和快速通过狭窄通道。</p>
+                                <div class="route-tags">
+                                    <span class="tag">速度</span>
+                                    <span class="tag">滑铲</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="route-item">
+                            <img src="https://picsum.photos/seed/park/600/400.jpg" alt="城市公园" class="route-bg">
+                            <div class="route-overlay">
+                                <h3>城市公园</h3>
+                                <p>安全的训练场所，拥有起伏的坡道和低矮的树丛障碍。</p>
+                                <div class="route-tags">
+                                    <span class="tag">新手</span>
+                                    <span class="tag">综合</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <div class="section-header">
+                    <h2>常见问题 (FAQ)</h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        跑酷需要什么基础体能？
+                        <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        跑酷对身体素质有较高要求，主要包括核心力量、下肢爆发力、柔韧性和平衡感。建议在开始前进行深蹲、俯卧撑和开合跳等基础训练，逐步提升身体机能。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        初学者应该从哪里开始？
+                        <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        初学者应先学习基本的跑动步伐和落地缓冲技巧。建议先在草地或软垫上练习，学习如何正确落地以保护关节，然后再尝试简单的障碍物翻越动作。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        练习跑酷会受伤吗？
+                        <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </div>
+                    <div class="faq-answer">
+                        任何高强度的体育运动都存在受伤风险。跑酷也不例外。通过穿戴全套护具、选择安全的场地、循序渐进地增加训练强度以及进行充分的拉伸，可以最大程度地降低受伤概率。
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 1rem;">
+                    <span>ParkourHub</span>
+                </div>
+                <p style="color: var(--text-light); font-size: 0.9rem;">
+                    致力于推广健康、积极、安全的跑酷文化。连接每一位热爱探索的城市行者。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#intro">运动介绍</a></li>
+                    <li><a href="#skills">技巧教学</a></li>
+                    <li><a href="#routes">场地推荐</a></li>
+                    <li><a href="#safety">安全须知</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源下载</h4>
+                <ul>
+                    <li><a href="#">基础训练计划表</a></li>
+                    <li><a href="#">装备选购指南PDF</a></li>
+                    <li><a href="#">安全法规汇总</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系我们</h4>
+                <ul>
+                    <li><a href="#">加入社区群组</a></li>
+                    <li><a href="#">投稿合作</a></li>
+                    <li><a href="#">安全反馈</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ParkourHub. All Rights Reserved. 本站内容仅供学习交流使用。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
