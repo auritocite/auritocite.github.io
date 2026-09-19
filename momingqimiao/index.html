@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>莫明其妙的穿越-热门穿越题材小说、影视与时空冒险指南</title>
+    <meta name="description" content="莫明其妙的穿越专题。汇集热门穿越题材小说、影视剧推荐、穿越系统设定解析及时空冒险指南。探索主角如何意外跨越时空，体验不同世界的奇妙冒险。">
+    <meta name="keywords" content="莫明其妙的穿越,穿越小说,时空穿越,影视剧推荐,穿越题材">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --accent-color: #ff4b1f;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f8f9fa;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .btn-subscribe {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-right: 8px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Featured Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #eee;
+            position: relative;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--accent-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        /* Categories Section */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .category-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid #eee;
+            transition: all 0.2s;
+        }
+
+        .category-item:hover {
+            border-color: var(--secondary-color);
+            background: #f0f7ff;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-name {
+            font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 16px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--secondary-color);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #aaa;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">时空漫游指南</a>
+            <nav class="nav-links">
+                <a href="#featured">热门推荐</a>
+                <a href="#categories">题材分类</a>
+                <a href="#guide">穿越指南</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#" class="btn-subscribe">订阅更新</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>莫明其妙的穿越</h1>
+                <p>探索那些令人啼笑皆非、脑洞大开的时空冒险故事。从意外车祸到神秘梦境，主角们如何在陌生的世界开启新的传奇？</p>
+                <div class="hero-tags">
+                    <span>异世界</span>
+                    <span>系统觉醒</span>
+                    <span>历史反穿</span>
+                    <span>游戏入世</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Content -->
+        <section id="featured" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>当莫明其妙的穿越发生</h2>
+                    <p>精选最热门的穿越题材作品，带你体验那些打破逻辑的奇妙旅程。</p>
+                </div>
+                
+                <div class="grid-3">
+                    <!-- Article Card 1 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-badge">热门</span>
+                            <img src="https://picsum.photos/seed/cross1/400/250" alt="古代背景的穿越场景">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">误入大梁：当现代医生成了王爷</h3>
+                            <p class="card-desc">一场莫名的雷雨让林医生穿越到了大梁国。没有系统，没有金手指，只有满身的医术和不得不面对的朝堂阴谋。</p>
+                            <div class="card-meta">
+                                <span>2023-10-15</span>
+                                <span>阅读: 12w+</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 2 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-badge">科幻</span>
+                            <img src="https://picsum.photos/seed/cross2/400/250" alt="未来科技背景">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">2077年的外卖员：莫明其妙的穿越</h3>
+                            <p class="card-desc">送餐途中遭遇时空乱流，醒来发现自己成了全息游戏里的NPC。如何从底层小兵一步步爬上服务器顶端？</p>
+                            <div class="card-meta">
+                                <span>2023-10-12</span>
+                                <span>阅读: 8.5w+</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article Card 3 -->
+                    <article class="card">
+                        <div class="card-image">
+                            <span class="card-badge">悬疑</span>
+                            <img src="https://picsum.photos/seed/cross3/400/250" alt="神秘古宅">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">午夜古宅：为何只有我穿越了？</h3>
+                            <p class="card-desc">一群探险者进入古宅，醒来后只剩下主角一人，且身处百年前的时空。究竟是鬼魂作祟，还是时空裂缝的必然选择？</p>
+                            <div class="card-meta">
+                                <span>2023-10-10</span>
+                                <span>阅读: 15w+</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="section" style="background-color: #eef2f7;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>穿越题材分类</h2>
+                    <p>了解不同类型的“莫明其妙的穿越”，找到你最感兴趣的切入点。</p>
+                </div>
+                
+                <div class="category-grid">
+                    <div class="category-item">
+                        <span class="category-icon">🏯</span>
+                        <div class="category-name">历史穿越</div>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">改写朝代命运</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">⚔️</span>
+                        <div class="category-name">游戏穿越</div>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">从零开始练级</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">🔮</span>
+                        <div class="category-name">玄幻异世</div>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">魔法与修真</div>
+                    </div>
+                    <div class="category-item">
+                        <span class="category-icon">🚀</span>
+                        <div class="category-name">星际未来</div>
+                        <div style="font-size: 0.8rem; color: #888; margin-top: 5px;">探索未知宇宙</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide & FAQ -->
+        <section id="guide" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>穿越指南与常见问题</h2>
+                    <p>深入解析穿越背后的逻辑，解答关于时空旅行的常见疑惑。</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <!-- Guide Content -->
+                    <div>
+                        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">穿越的主要触发方式</h3>
+                        <p style="margin-bottom: 15px; color: var(--text-light);">
+                            在“莫明其妙的穿越”题材中，触发机制通常分为以下几类：
+                        </p>
+                        <ul style="list-style: disc; padding-left: 20px; color: var(--text-light); margin-bottom: 20px;">
+                            <li><strong>意外事故：</strong>车祸、高空坠落、触电等物理事故。</li>
+                            <li><strong>神秘事件：</strong>进入古董店、触碰神秘古物、阅读禁忌书籍。</li>
+                            <li><strong>梦境连接：</strong>在梦中醒来，发现现实与梦境颠倒。</li>
+                            <li><strong>科技故障：</strong>实验事故、服务器崩溃导致的数据溢出。</li>
+                        </ul>
+                        <p style="color: var(--text-light);">
+                            无论是哪种方式，核心看点往往在于主角如何利用现代知识或性格优势，在陌生环境中生存并寻找回家的路。
+                        </p>
+                    </div>
+
+                    <!-- FAQ Accordion -->
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                为什么主角总是“莫名其妙”地穿越？
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                这种设定通常是为了强调不可控性和命运的偶然性。它打破了传统穿越小说中“精心准备”或“明确目的”的套路，增加了故事的悬疑感和喜剧效果，让主角的每一步行动都充满未知。
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                穿越后没有系统怎么办？
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                这是“无系统流”穿越的特点。主角依靠自身的智慧、现代技能或对历史的了解来解决问题。这类故事更注重人物成长和剧情逻辑，而非单纯的数据堆砌。
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                穿越小说的结局通常是怎样的？
+                                <span class="faq-icon">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                结局多样。有的选择留在异界享受生活，有的选择改变历史后回归，有的则选择与异界人产生羁绊。这取决于作者想要表达的主题。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>时空漫游指南</h4>
+                    <p style="color: #888; font-size: 0.9rem;">致力于收录最精彩的穿越题材内容，为读者提供丰富的阅读体验和深度的题材解析。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#featured">热门推荐</a></li>
+                        <li><a href="#categories">题材分类</a></li>
+                        <li><a href="#guide">穿越指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关专题</h4>
+                    <ul>
+                        <li><a href="#">无限流</a></li>
+                        <li><a href="#">系统流</a></li>
+                        <li><a href="#">异世界</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 时空漫游指南. All Rights Reserved. 
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
