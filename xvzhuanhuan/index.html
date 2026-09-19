@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xv转换mp4 - 免费在线视频格式转换工具与教程指南</title>
+    <meta name="description" content="提供专业的xv转换mp4服务，支持多种视频格式一键转换。详细介绍xv文件格式特点、转换原理、操作步骤及注意事项，帮助您解决视频播放兼容性问题。">
+    <meta name="keywords" content="xv转换mp4,视频格式转换,xv文件转换,mp4视频,在线转换工具">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary-color: #64748b;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #475569;
+            --border-color: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-sub);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+            letter-spacing: -0.025em;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-sub);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-box {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: #eff6ff;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Tools Section */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1.5rem;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .tool-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .drop-zone {
+            border: 2px dashed var(--border-color);
+            border-radius: var(--radius);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .drop-zone:hover, .drop-zone.dragover {
+            border-color: var(--primary-color);
+            background-color: #eff6ff;
+        }
+
+        .drop-zone-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .drop-zone p {
+            color: var(--text-sub);
+            margin-bottom: 1.5rem;
+        }
+
+        .file-info {
+            display: none;
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .file-info.active {
+            display: flex;
+        }
+
+        .file-name {
+            font-weight: 600;
+            color: var(--text-main);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 60%;
+        }
+
+        .remove-file {
+            color: #ef4444;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .convert-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .convert-btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .convert-btn:disabled {
+            background-color: var(--secondary-color);
+            cursor: not-allowed;
+        }
+
+        /* Settings */
+        .settings-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        select, input[type="text"] {
+            padding: 0.625rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background-color: white;
+        }
+
+        /* Info Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .info-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        .info-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .step-content p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-main);
+        }
+
+        .faq-answer {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            display: none;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.2s;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--secondary-color);
+            font-size: 0.875rem;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #1e293b;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(150%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+        }
+
+        .toast-success { border-left: 4px solid #22c55e; }
+        .toast-error { border-left: 4px solid #ef4444; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>FormatPro</span>转换工具
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">格式说明</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>xv转换mp4 在线免费工具</h1>
+                <p>无需安装任何软件，支持批量处理，将 xv 视频格式快速转换为通用的 mp4 格式，确保在所有设备上流畅播放。</p>
+                <div class="cta-box">
+                    <button class="btn btn-primary" onclick="scrollToTool()">立即开始转换</button>
+                    <button class="btn btn-outline" onclick="scrollToGuide()">查看使用教程</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Main Tool Section -->
+            <section id="tool-section">
+                <div class="section-title">视频转换器</div>
+                
+                <div class="tool-card">
+                    <div class="drop-zone" id="dropZone">
+                        <div class="drop-zone-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <p>点击或将 xv/mp4 视频文件拖拽至此处</p>
+                        <p style="font-size: 0.875rem; color: #94a3b8;">支持 .xv, .xv2, .xv3 格式，最大支持 500MB</p>
+                        
+                        <input type="file" id="fileInput" accept=".xv,video/mp4,video/mov,video/avi" style="display: none;">
+                        
+                        <div class="file-info" id="fileInfo">
+                            <span class="file-name" id="fileName">video.xv</span>
+                            <span class="remove-file" id="removeFile">移除</span>
+                        </div>
+
+                        <button class="convert-btn" id="convertBtn" disabled>开始转换</button>
+                    </div>
+
+                    <div class="settings-grid">
+                        <div class="form-group">
+                            <label for="resolution">视频质量</label>
+                            <select id="resolution">
+                                <option value="high">高清 (1080p)</option>
+                                <option value="medium" selected>标准 (720p)</option>
+                                <option value="low">流畅 (480p)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="codec">编码格式</label>
+                            <select id="codec">
+                                <option value="h264">H.264 (通用推荐)</option>
+                                <option value="h265">H.265 (兼容性较差)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.125rem;">转换进度</h3>
+                    <div style="width: 100%; background-color: #e2e8f0; border-radius: 99px; height: 8px; overflow: hidden; margin-bottom: 0.5rem;">
+                        <div id="progressBar" style="width: 0%; background-color: var(--primary-color); height: 100%; transition: width 0.3s ease;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.875rem; color: var(--text-sub);">
+                        <span id="progressText">等待文件...</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sidebar Info -->
+            <aside id="guide-section">
+                <div class="info-card">
+                    <h3>什么是 xv 格式？</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-sub); margin-bottom: 1rem;">xv 通常是一种专有的视频封装格式，常见于特定的监控设备或早期网络视频平台。由于兼容性较差，大多数现代播放器无法直接打开。</p>
+                    <ul class="info-list">
+                        <li>常见于安防监控录像</li>
+                        <li>部分旧版视频软件生成</li>
+                        <li>无法直接在手机或浏览器播放</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>转换步骤</h3>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>上传文件</h4>
+                            <p>点击上传区域或拖入 xv 文件。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>选择参数</h4>
+                            <p>设置目标格式为 MP4 并选择画质。</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>下载结果</h4>
+                            <p>转换完成后点击下载即可。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            转换后的视频画质会变差吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            不会。我们使用无损或接近无损的编码方式。画质取决于您在设置中选择的分辨率（如1080p或720p），而不是转换过程本身。
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            转换需要多长时间？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            转换时间取决于文件大小和网络速度。通常 100MB 的文件在 1-3 分钟内即可完成。
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            支持批量转换吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            本工具支持一次性上传多个文件进行转换，系统会自动逐个处理并打包下载。
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col" style="flex: 2; min-width: 300px;">
+                <div class="logo" style="margin-bottom: 1rem;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    <span>FormatPro</span>转换工具
+                </div>
+                <p style="color: var(--text-sub); font-size: 0.9rem; max-width: 400px;">
+                    专注于提供简单、高效、安全的在线视频格式转换服务。帮助用户解决 xv 等小众格式的播放难题。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">所有格式</a></li>
+                    <li><a href="#">转换历史</a></li>
+                    <li><a href="#">API 接口</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>支持</h4>
+                <ul>
+                    <li><a href="#">帮助文档</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">服务条款</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 FormatPro Tools. All rights reserved. 本站仅提供技术演示，所有文件均在本地处理。
+        </div>
+    </footer>
+
+    <div id="toast" class="toast">
+        <span id="toastIcon"></span>
+        <span id="toastMessage">操作成功</span>
+    </div>
+
+    <script>
+        // DOM Elements
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const removeFileBtn = document.getElementById('removeFile');
+        const convertBtn = document.getElementById('convertBtn');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const progressPercent = document.getElementById('progressPercent');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        const toastIcon = document.getElementById('toastIcon');
+
+        // State
+        let currentFile = null;
+
+        // Scroll to tool
+        function scrollToTool() {
+            document.getElementById('tool-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToGuide() {
+            document.getElementById('guide-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // File Handling
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                handleFile(e.dataTransfer.files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            // Validation
+            const validTypes = ['video/xv', 'video/mp4', 'video/quicktime', 'video/x-msvideo', 'video/x-matroska'];
+            const fileNameExt = file.name.split('.').pop().toLowerCase();
+            
+            // Accept xv or generic video
+            if (fileNameExt === 'xv' || validTypes.includes(file.type)) {
+                currentFile = file;
+                fileName.textContent = file.name;
+                fileInfo.classList.add('active');
+                convertBtn.disabled = false;
+                convertBtn.textContent = '开始转换';
+                showToast('文件已加载，准备转换', 'success');
+            } else {
+                showToast('不支持的文件格式，请上传 xv 或 mp4 文件', 'error');
+            }
+        }
+
+        removeFileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            resetState();
+        });
+
+        function resetState() {
+            currentFile = null;
+            fileInput.value = '';
+            fileInfo.classList.remove('active');
+            convertBtn.disabled = true;
+            convertBtn.textContent = '开始转换';
+            progressBar.style.width = '0%';
+            progressText.textContent = '等待文件...';
+            progressPercent.textContent = '0%';
+        }
+
+        // Conversion Logic (Simulation)
+        convertBtn.addEventListener('click', () => {
+            if (!currentFile) return;
+
+            convertBtn.disabled = true;
+            convertBtn.textContent = '转换中...';
+            
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 100) progress = 100;
+
+                progressBar.style.width = `${progress}%`;
+                progressPercent.textContent = `${Math.floor(progress)}%`;
+                progressText.textContent = '正在处理视频流...';
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        showToast('转换完成！您可以下载文件', 'success');
+                        convertBtn.textContent = '下载 MP4';
+                        convertBtn.disabled = false;
+                        convertBtn.onclick = downloadFile;
+                    }, 500);
+                }
+            }, 300);
+        });
+
+        function downloadFile() {
+            // Create a dummy download link
+            const link = document.createElement('a');
+            link.href = '#';
+            link.download = currentFile.name.replace(/\.[^/.]+$/, "") + '.mp4';
+            
+            // In a real app, this would point to the processed blob
+            // For this demo, we simulate a successful action
+            showToast('下载已开始', 'success');
+            window.location.reload(); // Reset for demo
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const isOpen = element.classList.contains('open');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('open');
+            });
+
+            // Open clicked if it wasn't open
+            if (!isOpen) {
+                element.classList.add('open');
+            }
+        }
+
+        // Toast Notification
+        function showToast(message, type) {
+            toastMessage.textContent = message;
+            toast.className = `toast toast-${type} show`;
+            
+            if (type === 'success') {
+                toastIcon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+            } else {
+                toastIcon.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
+            }
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
